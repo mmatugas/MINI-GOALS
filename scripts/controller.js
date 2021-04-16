@@ -1,6 +1,6 @@
 //press enter button to add
 document.addEventListener("keyup",function(event){
-	if(event.keyCode == 13){
+	if(event.keyCode == 13 && LIST.length < 3){
 		const toDo = input.value;
 		if(toDo){
 			addToDo(toDo, id, false, false);

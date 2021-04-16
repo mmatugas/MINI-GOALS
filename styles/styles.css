@@ -2,59 +2,63 @@ body{
     padding: 0;
     margin: 0;
     background-color: none;
+    /*font-family: 'Titillium Web', sans-serif;*/
     font-family: 'Jost', sans-serif;
     color: #4a3a2c;
 
 }
-/*---- GOALS ----*/
 .container {
-	padding:10px;
+    padding:10px;
     padding-top: 20px;
-	width: 370px;
-	margin: 0 auto;
+    width: 370px;
+    /*background-color: #6b6b6b;*/
+    margin: 0 auto;
+    /*background: rgba(107, 107, 107, 0.4);*/
     background-image: url(../assets/background.jpg);
 
 }
 
 .header {
-	width: 160px;
-	height: 45px;
-	background-color: #f3aa66;
-	position: relative;
-	padding-top: 5px;
+    width: 160px;
+    height: 45px;
+    background-color: #f3aa66;
+    position: relative;
+    padding-top: 5px;
     color: #4a3a2c;
     
 }
 
 .just-title{
-	position: relative;
-	text-align: center;
+    position: relative;
+    text-align: center;
 
 }
 
 .content{
     width:160px;
     height: 110px;
-    max-height:150px;
+    max-height:110px;
     background-color: #fcecdc; 
 
     overflow: auto;
 }
 
 .content ul{
-    padding:0;
+    padding:5;
     margin:0;
 }
 
 .item{
-    width:160px;
+    width:150px;
     height: 30px;
-    min-height: 30px;
+    min-height: 35px;
     position: relative;
+    /*border-bottom: 1px solid rgba(0,0,0,0.1);*/
     list-style: none;
     padding: 0;
     margin: 0;
     color:#4a3a2c;
+    /*border-style: dotted;*/
 }
 
 .item i.co{
@@ -68,21 +72,25 @@ body{
     cursor: pointer;
 }
 .fa-check-circle{
-	padding-left: 5px;
+    padding-left: 5px;
+   /* color:#6eb200;*/
 }
 
 .item p.text{
     position: absolute;
-    padding:0;
+    padding-right:20;
     margin:0;
     font-size: 15px;
     left:40px;
     top:5px;
+    /*background-color: #FFF;*/
     max-width:285px;
+    display: flex;
 }
 
 .lineThrough{
     text-decoration: line-through;
+    /*color : #ccc;*/
 }
 .item i.de{
     position: absolute;
@@ -122,6 +130,7 @@ body{
     height:20px;
     background-color: #FFF;
     padding: 5px;
+    /*border-top: 1px solid rgba(0,0,0,0.1);*/
 }
 
 /*in add-to-do id: input */;
@@ -133,18 +142,20 @@ body{
     background-color: transparent;
     border: none;
     font-size: 20px;
+    /*padding-left:10px;*/
 }
 
 .add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #4162f6;
+    /*font-family: 'Titillium Web', sans-serif;*/
     font-family: 'Jost', sans-serif;
     font-size: 10px;
   }
 
- /*---- MOTIVATIONAL QUOTES------ */
+ /* My own input */
  .motivational{
- 	text-align: center;
- 	position: relative;
+    text-align: center;
+    position: relative;
 
  }
 
@@ -158,7 +169,17 @@ body{
     position: relative;
     justify-content: center;
     align-items: center;
+    /*background: url(clock.png);*/
     background-size: cover;
+    /*border:4px solid #091921;*/
+    /*border-radius: 50%;*/ /*make it a ircle */
+
+    /*to make a shadow*/
+   /*box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+                inset 0 -15px 15px rgba(255,255,255,0.05),
+                0 15px 15px rgba(0,0,0,0.3),
+                inset 0 15px 15px rgba(0,0,0,0.3); */
+                /*0.3 the depth of the shadow*/
 
 }
 
@@ -213,6 +234,7 @@ body{
 .hr, .mn, .sc{
     display: flex;
     justify-content: center;
+    /*align-items: center;*/
     position: absolute;
     border-radius: 50%; 
 }
@@ -248,13 +270,19 @@ body{
     background: #fff;
     z-index: 12;
     border-radius: 6px 6px 0 0 ;
+
 }
 
 /*----ADD ONS---- */
 
 .shadow{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*text-align: center;*/
 }
+
+
+
+
 
 
 

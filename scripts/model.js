@@ -40,29 +40,39 @@ function addToDo(toDo,id,done,trash){
 
 	const DONE = done ? CHECK : UNCHECK;
 	const LINE = done ? LINE_THROUGH : "";
-	
+	/*console.log(LIST.length) */
 
 	//item
-	const item = `<li class="item">
-					<i class= "fa ${DONE} "style="padding-left: 5px; padding-top: 8px" job="complete" id="0"></i>
-					<p class="text ${LINE}">${toDo}</p>
-					<i class="fa fa-times de" job="delete" id="0"></i> 
-				</li> `;
+	if (LIST.length < 3){
+		const item = `<li class="item">
+						<i class= "fa ${DONE} "style="padding-left: 5px; padding-top: 8px" job="complete" id="0"></i>
+						<p class="text ${LINE}">${toDo}</p>
+						<i class="fa fa-times de" style="padding-left: 10px;" job="delete" id="0"></i> 
+					</li> `;
 
-	const position = "beforeend";
+		const position = "beforeend";
+		
+		//call list to put the item
+		list.insertAdjacentHTML(position,item);
+		document.getElementById('input').disabled = false;
+	}else{
+		document.getElementById('input').disabled = false;;
+	}
 
-	//call list to put the item
-	list.insertAdjacentHTML(position,item);
-
+	
 } 
+
+
 function addMotivation(words){
 
 	const test = words;
 	const temp = `<p class="motivational animate__animated animate__fadeIn animate__delay-3s" id="showMotivation"> 
 					${words}</p>`;
 
+	/*testArea.insertAdjacentHTML("beforebegin",temp);*/
 	document.getElementById("motivationalTextArea").innerHTML = temp;
 	
+
 }
 
 function completeToDo(element){
@@ -78,6 +88,7 @@ function removeToDo(element){
 	element.parentNode.parentNode.removeChild(element.parentNode);
 
 	LIST[element.id].trash = true;
+	LIST.length --;
 
 }
 
